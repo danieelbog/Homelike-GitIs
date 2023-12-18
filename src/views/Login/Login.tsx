@@ -21,7 +21,7 @@ export default function LoginPage() {
     };
 
     return (
-        <div id="issues-page">
+        <div id="login-page">
             <div>I am Login</div>
             <form onSubmit={handleFormSubmit}>
                 <input
