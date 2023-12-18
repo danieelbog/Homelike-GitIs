@@ -7,12 +7,12 @@ import Footer from './footer/footer';
 
 export default function DefaultLayout() {
     return (
-        <div className="container-fluid g-0">
-            <ApolloProvider client={client}>
-                <Navbar></Navbar>
+        <ApolloProvider client={client}>
+            <Navbar></Navbar>
+            <main>
                 <Outlet></Outlet>
-                <Footer></Footer>
-            </ApolloProvider>
-        </div>
+            </main>
+            <Footer></Footer>
+        </ApolloProvider>
     );
 }
