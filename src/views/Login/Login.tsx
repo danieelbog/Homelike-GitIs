@@ -65,7 +65,7 @@ export default function LoginPage() {
                         type="submit"
                         className="btn btn-primary"
                     >
-                        Authenticate
+                        Login
                     </button>
                 </div>
             </form>
