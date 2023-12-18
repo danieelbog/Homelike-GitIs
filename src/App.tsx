@@ -1,17 +1,36 @@
-import { useLocation, useRouteLoaderData } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useLocation, useNavigate, useRouteLoaderData } from 'react-router-dom';
 import { IRouterMeta } from './types/IRouterMeta';
+import { useSelector } from 'react-redux';
 
 import AppError from './App-Error';
 import DefaultLayout from './components/layouts/default-layout';
 import EmptyLayout from './components/layouts/empty-layout';
 
-function App() {
-    const location = useLocation();
-    const meta = useRouteLoaderData(`${location.pathname == '/' ? '/issues' : location.pathname}`) as IRouterMeta;
-    if (meta) document.title = meta.pageTitle;
-    else return <AppError></AppError>;
+function setTitle(meta: IRouterMeta | undefined): void {
+    if (meta) {
+        document.title = meta.pageTitle;
+    }
+}
 
-    return meta && meta.noLayout ? <EmptyLayout /> : <DefaultLayout />;
+function App(): JSX.Element {
+    const location = useLocation();
+    const navigate = useNavigate();
+    const api = useSelector((state) => state.api.value);
+    const meta = useRouteLoaderData(`${location.pathname === '/' ? '/issues' : location.pathname}`) as IRouterMeta;
+
+    useEffect(() => {
+        const redirectTo = new URLSearchParams(location.search).get('redirectTo');
+        const shouldRedirect = !api && !meta.allowAnonymous && !redirectTo;
+
+        if (shouldRedirect) navigate(`/login?redirectTo=${window.location.pathname}`);
+        else if (api && !meta.allowAnonymous && redirectTo) navigate(redirectTo);
+    }, [api, meta.allowAnonymous, location.search, navigate]);
+
+    if (!meta) return <AppError />;
+    setTitle(meta);
+
+    return meta.noLayout ? <EmptyLayout /> : <DefaultLayout />;
 }
 
 export default App;
