@@ -1,9 +1,11 @@
 import { Outlet } from 'react-router-dom';
 
-export default function EmptyLayout() {
+const EmptyLayout = (): JSX.Element => {
     return (
         <main>
             <Outlet></Outlet>
         </main>
     );
-}
+};
+
+export default EmptyLayout;

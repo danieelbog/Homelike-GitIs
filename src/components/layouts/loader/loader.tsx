@@ -1,4 +1,4 @@
-export default function Navbar() {
+const Loader = (): JSX.Element => {
     return (
         <div className="d-flex justify-content-center m-2 text-primary">
             <div
@@ -8,4 +8,6 @@ export default function Navbar() {
             ></div>
         </div>
     );
-}
+};
+
+export default Loader;

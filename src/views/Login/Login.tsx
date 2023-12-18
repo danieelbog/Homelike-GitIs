@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { set } from '@/stores/api/api-slice';
 import { useNavigate } from 'react-router-dom';
 
-export default function LoginPage() {
+const LoginPage = (): JSX.Element => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const [inputValue, setInputValue] = useState('');
@@ -25,6 +25,10 @@ export default function LoginPage() {
         dispatch(set(inputValue));
         setInputValue('');
 
+        loginRedirerct();
+    };
+
+    const loginRedirerct = () => {
         const redirectTo = new URLSearchParams(window.location.search).get('redirectTo');
         navigate(redirectTo || '/');
     };
@@ -56,7 +60,7 @@ export default function LoginPage() {
                 <ErrorMessage showError={showError} />
                 <div
                     id="access-token-help"
-                    className="form-text fst-italic"
+                    className="form-text fst-italic fw-light"
                 >
                     We'll never store or use maliciously your Access Token.
                 </div>
@@ -71,7 +75,7 @@ export default function LoginPage() {
             </form>
         </div>
     );
-}
+};
 
 interface ErrorMessageProps {
     showError: boolean;
@@ -85,3 +89,5 @@ function ErrorMessage({ showError }: ErrorMessageProps) {
         );
     }
 }
+
+export default LoginPage;

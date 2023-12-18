@@ -1,20 +1,28 @@
 import { ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import { useSelector } from 'react-redux';
+import { IRootState } from '../types/IStoreState';
 
-const httpLink = createHttpLink({
-    uri: 'https://api.github.com/graphql'
-});
+const useAuthApolloClient = () => {
+    const api = useSelector((state: IRootState) => state.api.value);
 
-const authLink = setContext((_, { headers }) => {
-    return {
-        headers: {
-            ...headers,
-            authorization: 'Bearer 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'
-        }
-    };
-});
+    const httpLink = createHttpLink({
+        uri: 'https://api.github.com/graphql'
+    });
 
-export const client = new ApolloClient({
-    link: authLink.concat(httpLink),
-    cache: new InMemoryCache()
-});
+    const authLink = setContext((_, { headers }) => {
+        return {
+            headers: {
+                ...headers,
+                authorization: api ? `Bearer ${api}` : ''
+            }
+        };
+    });
+
+    return new ApolloClient({
+        link: authLink.concat(httpLink),
+        cache: new InMemoryCache()
+    });
+};
+
+export default useAuthApolloClient;

@@ -1,0 +1,12 @@
+.nav-menu-dropdown-button {
+    .btn-outline-primary,
+    .btn-outline-primary.show {
+        &:hover,
+        &:active,
+        &:focus-visible {
+            .material-icons-round {
+                color: var(--bs-white);
+            }
+        }
+    }
+}
