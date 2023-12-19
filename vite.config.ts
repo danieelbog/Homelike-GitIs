@@ -53,6 +53,10 @@ function getAliases(): AliasOptions {
         {
             find: '@/assets',
             replacement: fileURLToPath(new URL('./src/assets', import.meta.url))
+        },
+        {
+            find: '@/utils',
+            replacement: fileURLToPath(new URL('./src/utils', import.meta.url))
         }
     ];
 }

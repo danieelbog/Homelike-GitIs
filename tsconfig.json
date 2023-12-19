@@ -14,7 +14,8 @@
             "@/api/*": ["./src/api/*"],
             "@/router/*": ["./src/router/*"],
             "@/assets/*": ["./src/assets/*"],
-            "bootstrap/dist/js/bootstrap": ["./node_modules/types/bootstrap"]
+            "@/utils/*": ["./src/utils/*"],
+            "~bootstrap": ["./node_modules/@types/bootstrap"]
         },
 
         /* Bundler mode */

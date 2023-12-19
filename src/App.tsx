@@ -7,6 +7,7 @@ import { IRootState } from './types/IStoreState';
 import AppError from './App-Error';
 import DefaultLayout from './components/layouts/default-layout';
 import EmptyLayout from './components/layouts/empty-layout';
+import { setBootstrapComponents } from './utils/popover-inti';
 
 function setTitle(meta: IRouterMeta): void {
     if (meta) document.title = meta.pageTitle;
@@ -23,6 +24,8 @@ const App = (): JSX.Element => {
 
         if (shouldRedirect) navigate(`/login?redirectTo=${window.location.pathname}`);
         else if (api && !meta.allowAnonymous && redirectTo) navigate(redirectTo);
+
+        setBootstrapComponents();
     }, [api, meta.allowAnonymous, location.search, navigate]);
 
     if (!meta) return <AppError />;
