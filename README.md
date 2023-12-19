@@ -8,45 +8,59 @@
   </a>
 
   <h3 align="center">GitIs</h3>
-  <p>because (Git) is having (Is)sues</p>
+  <p>Βecause (Git) is having (Is)sues</p>
 </div>
 
 # GitHub Issues Fiesta! 🎉
 
 Howdy folks, brace yourselves for my inaugural React project! Now, I'm typically a Vue enthusiast, so forgive me if I've thrown in some Vue flavor here and there. Despite my Vue roots, I'm thrilled to announce that diving into React, Apollo, and GraphQL was nothing short of AWESOME!
 
-## The Scoop
+## Table of Contents
+
+- [GitHub Issues Fiesta! 🎉](#github-issues-fiesta--)
+  - [The Scoop](#the-scoop)
+    - [Unleash the GraphQL Magic](#unleash-the-graphql-magic)
+  - [Epic Tasks](#epic-tasks)
+    - [Task 1: Showtime!](#task-1-showtime)
+    - [Bonus Tasks: The Afterparty](#bonus-tasks-the-afterparty)
+      - [Task 2: Paging Divas](#task-2-paging-divas)
+      - [Task 3: Filter Frenzy](#task-3-filter-frenzy)
+  - [Tech Fiesta](#tech-fiesta)
+  - [Demo Time](#demo-time)
+  - [Project Setup](#project-setup)
+
+### The Scoop
 
 This project is like crafting a dazzling client app using React.js and the GitHub GraphQL API. Imagine the spotlight on React.js repo issues—front and center, baby!
 
-### Unleash the GraphQL Magic
+#### Unleash the GraphQL Magic
 
 Dive into the GitHub GraphQL API wizardry [here](https://docs.github.com/en/graphql/overview/explorer).
 
-## Epic Tasks
+### Epic Tasks
 
-### Task 1: Showtime!
+#### Task 1: Showtime!
 
 Roll out the red carpet for the [React.js repo issues](https://github.com/reactjs/reactjs.org/issues). Let's make them stars!
 
-### Bonus Tasks: The Afterparty
+#### Bonus Tasks: The Afterparty
 
-#### Task 2: Paging Divas
+##### Task 2: Paging Divas
 
 Implement pagination for a seamless experience. Imagine scrolling through the issues—it's like flipping through a blockbuster script, but better! SCROLLING MAGIC, YAY!
 
-#### Task 3: Filter Frenzy
+##### Task 3: Filter Frenzy
 
 Create filters for open and closed issues. Because sometimes, you need a little drama in your life.
 
-## Tech Fiesta
+### Tech Fiesta
 
--   React.js
--   Typescript
--   HTML
--   CSS
--   Unit Testing
--   Apollo GraphQL
+- React.js
+- Typescript
+- HTML
+- CSS
+- Unit Testing
+- Apollo GraphQL
 
 # Demo Time
 
