@@ -1,5 +1,4 @@
 <a name="readme-top"></a>
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -9,6 +8,20 @@
 
   <h3 align="center">GitIs</h3>
   <p>Βecause (Git) is having (Is)sues</p>
+
+  <p align="center">
+    A small project demonstrating some basic Web development features.
+    <br />
+    <a href="https://github.com/danieelbog/Homelike-GitIs/blob/main/README.md"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://gitis.netlify.app/">View Demo</a>
+    ·
+    <a href="https://github.com/danieelbog/Homelike-GitIs/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/danieelbog/Homelike-GitIs/issues">Request Feature</a>
+  </p>
+  
 </div>
 
 # GitHub Issues Fiesta! 🎉
