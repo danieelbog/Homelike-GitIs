@@ -75,3 +75,21 @@ You can click the arrow to be smoothly scrolled to the top page.
 If you want to change your Token, you can log out:
 
 ![Logout Page](https://github.com/danieelbog/Homelike-GitIs/assets/54244808/d4f8357e-a92a-4282-83c8-c1f333d82787)
+
+## Project Setup
+
+```sh
+npm install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+### Type-Check, Compile and Minify for Production
+
+```sh
+npm run build
+```
