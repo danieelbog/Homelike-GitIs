@@ -1,3 +1,16 @@
+<a name="readme-top"></a>
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/danieelbog/miniOpply">
+    <img src="https://robohash.org/5173" alt="Logo" width="80" height="80">
+  </a>
+
+  <h3 align="center">GitIs</h3>
+  <p>because (Git) is having (Is)sues</p>
+</div>
+
 # GitHub Issues Fiesta! 🎉
 
 Howdy folks, brace yourselves for my inaugural React project! Now, I'm typically a Vue enthusiast, so forgive me if I've thrown in some Vue flavor here and there. Despite my Vue roots, I'm thrilled to announce that diving into React, Apollo, and GraphQL was nothing short of AWESOME!
